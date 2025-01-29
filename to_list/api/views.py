@@ -46,3 +46,16 @@ def post_curso(request):
 
     }
     return JsonResponse(context)
+
+
+
+
+
+
+
+
+
+#uso del drf dijango rest framework 
+# serializers es para pasar de models a json 
+from rest_framework import generics,serializers
+
