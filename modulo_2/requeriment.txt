@@ -1,5 +1,4 @@
 django==3.2
 setuptools
 psycopg2-binary
-
 djangorestframework

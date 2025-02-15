@@ -57,5 +57,15 @@ def post_curso(request):
 
 #uso del drf dijango rest framework 
 # serializers es para pasar de models a json 
-from rest_framework import generics,serializers
+from rest_framework import generics,serializers # 1 
+                                                #serializers convertir ojetos de models a  formato json   viseversa 
 
+class Cursoserialiser(serializers.ModelSerializer):
+    class meta:
+        model=Curso 
+        fields='__all__'
+
+
+class Cursolist (generics.ListCreateAPIView):
+    queryset=Curso.objects.all()
+    serializer_class=Cursoserialiser

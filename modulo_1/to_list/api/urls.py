@@ -6,6 +6,7 @@ from . import views
 urlpatterns = [
     path('',views.index),
     path('cursos/',views.cursos),
-    path('cursos/new',views.post_curso)
+    path('cursos/new',views.post_curso),
+    path('cursodfr',views.Cursolist.as_view())
 
 ]
